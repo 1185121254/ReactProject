@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Component, createContext } from "react";
+import Frist from './Component/Frist';
+import Second from './Component/Second';
+import Three from './Component/Three';
+import {AppContext} from './Component/Context';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  render() {
+    return (
+      <AppContext.Provider value={"huang shun yi"}>
+        <div>
+          <Middle />
+        </div>
+      </AppContext.Provider>
+    );
+  }
 }
-
+class Middle extends Component {
+  render() {
+    return (
+      <div>
+        <Frist />
+        <Second />
+        <Three />
+      </div>
+    );
+  }
+}
 export default App;
