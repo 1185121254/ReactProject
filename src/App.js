@@ -4,7 +4,7 @@ import Frist from './Component/Frist';
 import Second from './Component/Second';
 import Three from './Component/Three';
 import {AppContext} from './Component/Context';
-
+import './locale/index';
 
 class App extends Component {
   render() {
