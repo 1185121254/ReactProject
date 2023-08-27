@@ -13,10 +13,8 @@ class Three extends Component {
         <p>three test {value}</p>
         <p>{t('title')}</p>
         <p>{t('sex')}</p>
-
       </div>
     );
   }
 }
-
 export default withTranslation()(Three);
